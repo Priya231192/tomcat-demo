@@ -12,10 +12,23 @@ cd tomcat/bin
 
 check your machine on port <public-ip>:8080
 find / -name context.xml
-nano /opt/tomcat/conf/context.xml
-nano /opt/tomcat/webapps/examples/META-INF/context.xml
-nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
-nano /opt/tomcat/webapps/manager/META-INF/context.xml
+
+nano /opt/tomcat/conf/context.xml ( add catalina base path ")
+
+nano /opt/tomcat/webapps/examples/META-INF/context.xml (no changes)
+
+nano /opt/tomcat/webapps/host-manager/META-INF/context.xml  ("commented valve")
+nano /opt/tomcat/webapps/manager/META-INF/context.xml ("commented valve")
+
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|44.201.185.179" />
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer$
+-->
+
+cd conf
+nano server.xml (specify port and open same port in Ec2 instance)
+
+
 cd ..
 cd conf/
 nano tomcat-users.xml
