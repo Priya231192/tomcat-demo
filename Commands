@@ -17,8 +17,8 @@ nano /opt/tomcat/conf/context.xml ( add catalina base path ")
 
 nano /opt/tomcat/webapps/examples/META-INF/context.xml (no changes)
 
-nano /opt/tomcat/webapps/host-manager/META-INF/context.xml  ("commented valve")
-nano /opt/tomcat/webapps/manager/META-INF/context.xml ("commented valve")
+nano tomcat/webapps/host-manager/META-INF/context.xml  ("commented valve")
+nano tomcat/webapps/manager/META-INF/context.xml ("commented valve")
 
 <!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|44.201.185.179" />
@@ -42,6 +42,5 @@ nano tomcat-users.xml
 
 ./shutdown.sh
 ./startup.sh ==> Tomcat should be up and running.
-
 
 
